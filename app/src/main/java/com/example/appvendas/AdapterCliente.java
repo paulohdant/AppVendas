@@ -19,6 +19,7 @@ public class AdapterCliente extends ArrayAdapter<Cliente> {
             this.context = context;
             this.listaClientes = listaClientes;
         }
+
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -30,7 +31,7 @@ public class AdapterCliente extends ArrayAdapter<Cliente> {
 
         tvNomeClientes.setText(listaClientes.get(position).getNome());
         tvNumeroCliente.setText(listaClientes.get(position).getNumero());
-        return linha;
 
+        return linha;
     }
 }

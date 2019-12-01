@@ -1,6 +1,14 @@
 <resources>
     <string name="app_name">App Vendas</string>
     <string name="bt_cadCliente">Cadastrar cliente</string>
+    <string name="buscaClientes">Buscar</string>
     <string name="bt_listaCliente">Lista de Clientes</string>
     <string name="sair">Sair</string>
+    <string name="excluirCliente">Excluir</string>
+    <string name="atualizaCliente">Atualizar Cliente</string>
+    <string name="cadastraVenda">Cadastra Venda</string>
+    <string name="tvQntForm">Quantidade de produto</string>
+    <string name="tvDescForm">Descrição do produto</string>
+    <string name="tvDataForm">Data</string>
+    <string name="tvPrecoForm">Preço</string>
 </resources>

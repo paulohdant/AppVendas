@@ -15,10 +15,12 @@
 
             <TextView
                 android:id="@+id/tvNomeClientes"
-                android:layout_width="71dp"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:gravity="center|left"
                 android:text="TextView"
+                android:textColor="@color/colorAccent"
                 android:textSize="20sp" />
 
             <TextView
@@ -26,8 +28,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:gravity="center|left"
                 android:text="TextView"
-                android:textSize="20sp" />
+                android:textColor="@color/colorAccent"
+                android:textSize="16sp" />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>
