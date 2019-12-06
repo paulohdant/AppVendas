@@ -8,11 +8,6 @@ public class Cliente implements Serializable {
     private String nome;
     private String numero;
 
-    public Cliente(String nome, String numero) {
-        this.nome = nome;
-        this.numero = numero;
-    }
-
     public Cliente() {
 
     }
@@ -39,10 +34,5 @@ public class Cliente implements Serializable {
 
     public void setNumero(String numero) {
         this.numero = numero;
-    }
-
-    @Override
-    public String toString(){
-        return nome;
     }
 }
