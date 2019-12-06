@@ -1,10 +1,8 @@
-package com.example.appvendas.activities;
+package com.example.appvendas;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-
-import com.example.appvendas.R;
 
 public class FormsVenda extends AppCompatActivity {
 

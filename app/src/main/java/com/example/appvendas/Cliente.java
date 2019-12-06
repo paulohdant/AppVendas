@@ -1,4 +1,4 @@
-package com.example.appvendas.models;
+package com.example.appvendas;
 
 import java.io.Serializable;
 

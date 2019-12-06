@@ -9,11 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.FormsCliente"></activity>
-        <activity android:name=".activities.FormsVenda" />
-        <activity android:name=".activities.MainActivity" />
+        <activity android:name=".FormsCliente"></activity>
+        <activity android:name=".FormsVenda" />
+        <activity android:name=".MainActivity" />
         <activity
-            android:name=".activities.TelaSplash"
+            android:name=".TelaSplash"
             android:theme="@style/AppThemeNoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

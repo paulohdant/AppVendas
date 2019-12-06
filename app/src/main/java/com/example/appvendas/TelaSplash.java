@@ -1,12 +1,10 @@
-package com.example.appvendas.activities;
+package com.example.appvendas;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-
-import com.example.appvendas.R;
 
 public class TelaSplash extends AppCompatActivity{
     private static int tempoSplash = 3000;

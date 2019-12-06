@@ -1,11 +1,10 @@
-package com.example.appvendas.data;
+package com.example.appvendas;
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-
-import com.example.appvendas.models.Cliente;
+import android.view.MenuItem;
 
 import java.util.ArrayList;
 import java.util.List;

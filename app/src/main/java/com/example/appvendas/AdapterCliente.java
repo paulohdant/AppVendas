@@ -1,4 +1,4 @@
-package com.example.appvendas.adapter;
+package com.example.appvendas;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -6,9 +6,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
-
-import com.example.appvendas.models.Cliente;
-import com.example.appvendas.R;
 
 import java.util.List;
 
