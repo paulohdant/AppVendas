@@ -1,4 +1,4 @@
-package com.example.appvendas;
+package com.example.appvendas.activities;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,6 +16,11 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.Toast;
+
+import com.example.appvendas.models.Cliente;
+import com.example.appvendas.data.ClienteDAO;
+import com.example.appvendas.R;
+import com.example.appvendas.adapters.AdapterCliente;
 
 import java.util.ArrayList;
 import java.util.List;
