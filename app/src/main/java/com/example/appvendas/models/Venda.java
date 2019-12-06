@@ -1,4 +1,4 @@
-package com.example.appvendas;
+package com.example.appvendas.models;
 
 public class Venda {
     private String quantidade;

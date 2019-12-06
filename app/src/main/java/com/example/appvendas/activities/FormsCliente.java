@@ -1,4 +1,4 @@
-package com.example.appvendas;
+package com.example.appvendas.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,6 +11,10 @@ import android.widget.Button;
 import android.widget.EditText;
 //import android.widget.SearchView;
 import android.widget.Toast;
+
+import com.example.appvendas.models.Cliente;
+import com.example.appvendas.data.ClienteDAO;
+import com.example.appvendas.R;
 
 public class FormsCliente extends AppCompatActivity {
 

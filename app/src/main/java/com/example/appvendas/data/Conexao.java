@@ -1,4 +1,4 @@
-package com.example.appvendas;
+package com.example.appvendas.data;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
@@ -6,7 +6,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class Conexao extends SQLiteOpenHelper {
 
-    private static final String name = "banco.bd";
+    private static final String name = "banco.db";
     private static final int version = 1;
 
 
@@ -16,13 +16,12 @@ public class Conexao extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("CREATE TABLE cliente(id INTEGER PRIMARY KEY AUTOINCREMENT," +
-                " nome varchar(50), " +
-                "numero varchar(50))");
+        db.execSQL("CREATE TABLE cliente(id INTEGER PRIMARY KEY AUTOINCREMENT, nome TEXT NOT NULL, numero TEXT NOT NULL)");
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
-
+        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS cliente");
+        onCreate(sqLiteDatabase);
     }
 }
