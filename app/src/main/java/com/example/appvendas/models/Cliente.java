@@ -1,5 +1,7 @@
 package com.example.appvendas.models;
 
+import android.content.ContentValues;
+
 import java.io.Serializable;
 
 public class Cliente implements Serializable {
@@ -34,5 +36,14 @@ public class Cliente implements Serializable {
 
     public void setNumero(String numero) {
         this.numero = numero;
+    }
+
+    public ContentValues getContentValues() {
+        ContentValues cv = new ContentValues();
+
+        cv.put("nome", getNome());
+        cv.put("numero", getNumero());
+
+        return cv;
     }
 }

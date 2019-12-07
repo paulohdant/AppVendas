@@ -5,7 +5,7 @@ public class Venda {
     private String quantidade;
     private String descricao;
     private String data;
-    private String preco;
+    private Float preco;
 
     public Venda() {
     }
@@ -42,11 +42,11 @@ public class Venda {
         this.data = data;
     }
 
-    public String getPreco() {
+    public Float getPreco() {
         return preco;
     }
 
-    public void setPreco(String preco) {
+    public void setPreco(Float preco) {
         this.preco = preco;
     }
 }

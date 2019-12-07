@@ -16,9 +16,9 @@ public class Conexao extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("CREATE TABLE cliente(id INTEGER PRIMARY KEY AUTOINCREMENT, nome TEXT NOT NULL, numero TEXT NOT NULL)");
+        db.execSQL("CREATE TABLE cliente(_id INTEGER PRIMARY KEY AUTOINCREMENT, nome TEXT NOT NULL, numero TEXT NOT NULL)");
 
-        db.execSQL("CREATE TABLE venda(id INTEGER PRIMARY KEY AUTOINCREMENT, quantidade INTEGER NOT NUll, descricao TEXT NOT NULL, data TEXT NOT NULL, preco FLOAT NOT NULL, idCliente INTEGER, FOREIGN KEY (idCliente) REFERENCES cliente(id))");
+        db.execSQL("CREATE TABLE venda(_id INTEGER PRIMARY KEY AUTOINCREMENT, quantidade INTEGER NOT NUll, descricao TEXT NOT NULL, data TEXT NOT NULL, preco FLOAT NOT NULL, idCliente INTEGER, FOREIGN KEY (idCliente) REFERENCES cliente(id))");
 
         //db.execSQL("SELECT * FROM venda WHERE idCliente = id");
     }
@@ -26,6 +26,7 @@ public class Conexao extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
         sqLiteDatabase.execSQL("DROP TABLE IF EXISTS cliente");
+        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS venda");
         onCreate(sqLiteDatabase);
     }
 }
