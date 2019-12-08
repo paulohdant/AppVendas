@@ -2,6 +2,7 @@ package com.example.appvendas.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -16,6 +17,7 @@ public class FormsCliente extends AppCompatActivity {
     private EditText etNomeCliente;
     private EditText etNumeroCliente;
     private Button btSalvarCliente;
+    private Integer idDefalut = -1;
     private Cliente cliente = new Cliente();
     private ClienteDAO dao;
 
@@ -24,6 +26,7 @@ public class FormsCliente extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forms_cliente);
         carregarComponentes();
+        carregarDados();
 
         dao = new ClienteDAO(this);
 
@@ -34,7 +37,18 @@ public class FormsCliente extends AppCompatActivity {
                     Toast.makeText(FormsCliente.this, "Preencha todos os dados antes de salvar!", Toast.LENGTH_LONG).show();
                 }
                 else {
-                    salvar();
+                    if(idDefalut == -1) {
+                        salvar();
+                    }
+                    else {
+                        try {
+                            dao.atualizar(idDefalut, etNomeCliente.getText().toString(), etNumeroCliente.getText().toString());
+                            finish();
+                        }
+                        catch (Exception e) {
+                            Toast.makeText(FormsCliente.this, "Erro ao alterar cliente!", Toast.LENGTH_LONG).show();
+                        }
+                    }
                 }
             }
         });
@@ -44,6 +58,19 @@ public class FormsCliente extends AppCompatActivity {
         etNomeCliente = findViewById(R.id.etNomeCliente);
         etNumeroCliente = findViewById(R.id.etNumeroCliente);
         btSalvarCliente = findViewById(R.id.btSalvarCliente);
+    }
+
+    private void carregarDados() {
+        Intent intent = getIntent();
+
+        Integer id = intent.getIntExtra("id", -1);
+        String nome = intent.getStringExtra("nome");
+        String numero = intent.getStringExtra("numero");
+
+        idDefalut = id;
+
+        etNomeCliente.setText(nome);
+        etNumeroCliente.setText(numero);
     }
 
     private void salvar() {

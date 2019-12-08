@@ -139,6 +139,7 @@ public class MainActivity extends AppCompatActivity {
     public void excluirClienteDAO(MenuItem item){
         AdapterView.AdapterContextMenuInfo menuInfo = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
         final Cliente clienteExcluir = clientesFiltrados.get(menuInfo.position);
+
         AlertDialog dialog = new AlertDialog.Builder(this)
                 .setTitle("Atenção")
                 .setMessage("Realmente deseja excluir o cliente?")
@@ -148,7 +149,7 @@ public class MainActivity extends AppCompatActivity {
                     public void onClick(DialogInterface dialogInterface, int i) {
                         clientesFiltrados.remove(clienteExcluir);
                         clientes.remove(clienteExcluir);
-                        //dao.excluirClienteDAO(clienteExcluir);
+                        dao.deletar(clienteExcluir.getId());
                         listView.invalidateViews();
                     }
                 }).create();
@@ -160,7 +161,9 @@ public class MainActivity extends AppCompatActivity {
         final Cliente clienteAtualizar = clientesFiltrados.get(menuInfo.position);
 
         Intent i = new Intent(this, FormsCliente.class);
-        i.putExtra("cliente", clienteAtualizar);
+        i.putExtra("id", clienteAtualizar.getId());
+        i.putExtra("nome", clienteAtualizar.getNome());
+        i.putExtra("numero", clienteAtualizar.getNumero());
         startActivity(i);
     }
 
