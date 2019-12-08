@@ -10,6 +10,7 @@ import android.widget.TextView;
 import com.example.appvendas.R;
 import com.example.appvendas.models.Venda;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -35,9 +36,10 @@ public class AdapterVenda extends ArrayAdapter<Venda> {
         TextView tvPreco = linha.findViewById(R.id.tvPreco);
 
         tvDescricao.setText(listaVendas.get(position).getDescricao());
-        tvQuantidade.setText(listaVendas.get(position).getQuantidade());
+        tvQuantidade.setText("Qtd: " + listaVendas.get(position).getQuantidade().toString());
         tvData.setText(listaVendas.get(position).getData());
-        tvPreco.setText(listaVendas.get(position).getPreco().toString());
+        DecimalFormat formatter = new DecimalFormat("#.00");
+        tvPreco.setText(formatter.format(listaVendas.get(position).getPreco()) + " R$");
 
         return linha;
     }

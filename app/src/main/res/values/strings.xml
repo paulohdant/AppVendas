@@ -11,8 +11,8 @@
     <string name="excluirCliente">Excluir</string>
     <string name="atualizaCliente">Atualizar Cliente</string>
     <string name="cadastraVenda">Cadastrar Venda</string>
-    <string name="tvQntForm">Quantidade de produto</string>
-    <string name="tvDescForm">Descrição do produto</string>
-    <string name="tvDataForm">Data</string>
-    <string name="tvPrecoForm">Preço</string>
+    <string name="QuantidadeProduto">Quantidade de produto</string>
+    <string name="descricaoProduto">Descrição do produto</string>
+    <string name="DataProduto">Data</string>
+    <string name="precoProduto">Preço</string>
 </resources>

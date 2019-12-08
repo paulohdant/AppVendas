@@ -1,11 +1,14 @@
 package com.example.appvendas.models;
 
+import android.content.ContentValues;
+
 public class Venda {
     private Integer id;
-    private String quantidade;
+    private Integer quantidade;
     private String descricao;
     private String data;
     private Float preco;
+    private Integer idCliente;
 
     public Venda() {
     }
@@ -18,11 +21,11 @@ public class Venda {
         this.id = id;
     }
 
-    public String getQuantidade() {
+    public Integer getQuantidade() {
         return quantidade;
     }
 
-    public void setQuantidade(String quantidade) {
+    public void setQuantidade(Integer quantidade) {
         this.quantidade = quantidade;
     }
 
@@ -48,5 +51,25 @@ public class Venda {
 
     public void setPreco(Float preco) {
         this.preco = preco;
+    }
+
+    public Integer getIdCliente() {
+        return idCliente;
+    }
+
+    public void setIdCliente(Integer idCliente) {
+        this.idCliente = idCliente;
+    }
+
+    public ContentValues getContentValues() {
+        ContentValues cv = new ContentValues();
+
+        cv.put("quantidade", getQuantidade());
+        cv.put("descricao", getDescricao());
+        cv.put("data", getData());
+        cv.put("preco", getPreco());
+        cv.put("idCliente", getIdCliente());
+
+        return cv;
     }
 }

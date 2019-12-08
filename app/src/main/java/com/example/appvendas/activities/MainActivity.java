@@ -42,7 +42,6 @@ public class MainActivity extends AppCompatActivity {
         clientesFiltrados.addAll(clientes);
 
         AdapterCliente adapter = new AdapterCliente(this,  clientesFiltrados);
-        ListView listView = findViewById(R.id.listView);
         listView.setAdapter(adapter);
 
         registerForContextMenu(listView);
@@ -168,7 +167,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void cadastroVendaActivity(MenuItem item){
+        AdapterView.AdapterContextMenuInfo menuInfo = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
+        final Cliente dadosCliente = clientesFiltrados.get(menuInfo.position);
+
         Intent i = new Intent(MainActivity.this, FormsVenda.class);
+        i.putExtra("idCliente", dadosCliente.getId());
         startActivity(i);
     }
 }

@@ -22,13 +22,6 @@ public class ClienteDAO {
         this.context = context;
     }
 
-//    public long inserir(Cliente cliente){
-//        ContentValues values = new ContentValues();
-//        values.put("nome", cliente.getNome());
-//        values.put("numero", cliente.getNumero());
-//        return banco.insert("cliente", null, values );
-//    }
-
     public void inserir(Cliente cliente) throws SQLException {
         openDB();
         banco.insert("cliente", null, cliente.getContentValues());
@@ -53,26 +46,6 @@ public class ClienteDAO {
         return clientes;
     }
 
-//    public List<Cliente> obterTodos(){
-//        List<Cliente> clientes = new ArrayList<>();
-//        Cursor cursor = banco.query("cliente", new String[]{"id", "nome", "numero"}, null, null, null, null, null);
-//
-//        System.out.println("PASSOU AQUI");
-//        while(cursor.moveToNext()){
-//            Cliente a =  new Cliente();
-//            a.setId(cursor.getInt(0));
-//            a.setNome(cursor.getString(1));
-//            a.setNumero(cursor.getString(2));
-//            clientes.add(a);
-//        }
-//        return clientes;
-//    }
-
-
-//    public void excluirClienteDAO(Cliente a){
-//        banco.delete("cliente", "id = ?", new String[]{a.getId().toString()});
-//    }
-
     public void atualizar(Integer id, String nome, String numero) throws SQLException {
         ContentValues valores;
         openDB();
@@ -91,13 +64,6 @@ public class ClienteDAO {
         Toast.makeText(context, "Cliente excluído(a) com sucesso!", Toast.LENGTH_SHORT).show();
         closeDB();
     }
-
-//    public void atualizarClienteDAO(Cliente cliente){
-//        ContentValues values = new ContentValues();
-//        values.put("nome", cliente.getNome());
-//        values.put("numero", cliente.getNumero());
-//        banco.update("cliente", values, "id = ?", new String[]{cliente.getId().toString()});
-//    }
 
     private void openDB() throws SQLException {
         if (this.banco == null) {
