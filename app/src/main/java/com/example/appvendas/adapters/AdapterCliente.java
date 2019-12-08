@@ -29,7 +29,7 @@ public class AdapterCliente extends ArrayAdapter<Cliente> {
 
         View linha = inflater.inflate(R.layout.listview_clientes, parent, false);
 
-        TextView tvNomeClientes = linha.findViewById(R.id.tvNomeClientes);
+        TextView tvNomeClientes = linha.findViewById(R.id.tvNomeCliente);
         TextView tvNumeroCliente = linha.findViewById(R.id.tvNumeroCliente);
 
         tvNomeClientes.setText(listaClientes.get(position).getNome());

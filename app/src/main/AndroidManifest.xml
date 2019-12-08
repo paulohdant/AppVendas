@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.FormsCliente"></activity>
+        <activity android:name=".activities.ListarVendasActivity"></activity>
+        <activity android:name=".activities.FormsCliente" />
         <activity android:name=".activities.FormsVenda" />
         <activity android:name=".activities.MainActivity" />
         <activity

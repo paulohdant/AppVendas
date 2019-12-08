@@ -51,7 +51,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Cliente clienteSelecionado = (Cliente) adapterView.getItemAtPosition(i);
-                //Intent intent = new Intent(MainActivity.this, )
+                Intent intent = new Intent(MainActivity.this, ListarVendasActivity.class);
+                intent.putExtra("id", clienteSelecionado.getId());
+                startActivity(intent);
             }
         });
     }
