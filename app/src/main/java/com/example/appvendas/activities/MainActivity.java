@@ -26,13 +26,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-
-
-
     private ListView listView;
     private ClienteDAO dao;
-    private List<Cliente> clientes;
-    private List<Cliente> clientesFiltrados = new ArrayList<>();
+    private ArrayList<Cliente> clientes;
+    private ArrayList<Cliente> clientesFiltrados = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,10 +38,10 @@ public class MainActivity extends AppCompatActivity {
 
         listView = findViewById(R.id.listView);
         dao = new ClienteDAO(this);
-        clientes = dao.obterTodos();
+        clientes = dao.obterClientes();
         clientesFiltrados.addAll(clientes);
 
-        final AdapterCliente adapter = new AdapterCliente(this,  clientesFiltrados);
+        AdapterCliente adapter = new AdapterCliente(this,  clientesFiltrados);
         ListView listView = findViewById(R.id.listView);
         listView.setAdapter(adapter);
 
@@ -53,9 +50,8 @@ public class MainActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Cliente clientes_selecionado = (Cliente) adapterView.getItemAtPosition(i);
-                Toast.makeText(MainActivity.this, clientes_selecionado.getNome()+
-                        '\n'+clientes_selecionado.getNumero(), Toast.LENGTH_LONG).show();
+                Cliente clienteSelecionado = (Cliente) adapterView.getItemAtPosition(i);
+                //Intent intent = new Intent(MainActivity.this, )
             }
         });
     }
@@ -128,7 +124,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onResume(){
         super.onResume();
-        clientes = dao.obterTodos();
+        clientes = dao.obterClientes();
         clientesFiltrados.clear();
         clientesFiltrados.addAll(clientes);
         listView.invalidateViews();
@@ -150,7 +146,7 @@ public class MainActivity extends AppCompatActivity {
                     public void onClick(DialogInterface dialogInterface, int i) {
                         clientesFiltrados.remove(clienteExcluir);
                         clientes.remove(clienteExcluir);
-                        dao.excluirClienteDAO(clienteExcluir);
+                        //dao.excluirClienteDAO(clienteExcluir);
                         listView.invalidateViews();
                     }
                 }).create();

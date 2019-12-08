@@ -10,14 +10,14 @@ import android.widget.TextView;
 import com.example.appvendas.models.Cliente;
 import com.example.appvendas.R;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class AdapterCliente extends ArrayAdapter<Cliente> {
-
     private final Context context;
-    private final List<Cliente> listaClientes;
+    private final ArrayList<Cliente> listaClientes;
 
-        public AdapterCliente(Context context, List<Cliente> listaClientes){
+        public AdapterCliente(Context context, ArrayList<Cliente> listaClientes){
             super(context, R.layout.listview_clientes, listaClientes);
             this.context = context;
             this.listaClientes = listaClientes;

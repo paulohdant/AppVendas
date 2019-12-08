@@ -51,21 +51,21 @@ public class FormsCliente extends AppCompatActivity {
         }
     }
 
-    public void setup(View view) {
-        if(cliente == null) {
-            cliente = new Cliente();
-            cliente.setNome(nome.getText().toString());
-            cliente.setNumero(numero.getText().toString());
-            long id = dao.inserir(cliente);
-            Toast.makeText(this, "Pessoa inserida: " + id, Toast.LENGTH_SHORT).show();
-            System.out.println(cliente.getNome() + cliente.getNumero());
-            finish();
-        }else{
-            cliente.setNome(nome.getText().toString());
-            cliente.setNumero(numero.getText().toString());
-            dao.atualizarClienteDAO(cliente);
-            Toast.makeText(this, "Pessoa atualizada: ", Toast.LENGTH_SHORT).show();
-            finish();
-        }
-    }
+//    public void setup(View view) {
+//        if(cliente == null) {
+//            cliente = new Cliente();
+//            cliente.setNome(nome.getText().toString());
+//            cliente.setNumero(numero.getText().toString());
+//            long id = dao.inserir(cliente);
+//            Toast.makeText(this, "Pessoa inserida: " + id, Toast.LENGTH_SHORT).show();
+//            System.out.println(cliente.getNome() + cliente.getNumero());
+//            finish();
+//        }else{
+//            cliente.setNome(nome.getText().toString());
+//            cliente.setNumero(numero.getText().toString());
+//            dao.atualizarClienteDAO(cliente);
+//            Toast.makeText(this, "Pessoa atualizada: ", Toast.LENGTH_SHORT).show();
+//            finish();
+//        }
+//    }
 }

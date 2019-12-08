@@ -10,13 +10,14 @@ import android.widget.TextView;
 import com.example.appvendas.R;
 import com.example.appvendas.models.Venda;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class AdapterVenda extends ArrayAdapter<Venda> {
     private final Context context;
-    private final List<Venda> listaVendas;
+    private final ArrayList<Venda> listaVendas;
 
-    public AdapterVenda(Context context, List<Venda> listaVendas){
+    public AdapterVenda(Context context, ArrayList<Venda> listaVendas){
         super(context, R.layout.listview_vendas, listaVendas);
         this.context = context;
         this.listaVendas = listaVendas;
@@ -36,7 +37,7 @@ public class AdapterVenda extends ArrayAdapter<Venda> {
         tvDescricao.setText(listaVendas.get(position).getDescricao());
         tvQuantidade.setText(listaVendas.get(position).getQuantidade());
         tvData.setText(listaVendas.get(position).getData());
-        tvPreco.setText(listaVendas.get(position).getPreco());
+        tvPreco.setText(listaVendas.get(position).getPreco().toString());
 
         return linha;
     }

@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">App Vendas</string>
+    <string name="nome">Nome</string>
+    <string name="numero">Número</string>
+    <string name="salvar">Salvar</string>
     <string name="bt_cadCliente">Cadastrar cliente</string>
     <string name="buscaClientes">Buscar</string>
     <string name="bt_listaCliente">Lista de Clientes</string>
