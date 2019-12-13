@@ -17,10 +17,13 @@ import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.Toast;
 
+import com.example.appvendas.adapters.AdapterVenda;
+import com.example.appvendas.data.VendaDAO;
 import com.example.appvendas.models.Cliente;
 import com.example.appvendas.data.ClienteDAO;
 import com.example.appvendas.R;
 import com.example.appvendas.adapters.AdapterCliente;
+import com.example.appvendas.models.Venda;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -175,3 +178,4 @@ public class MainActivity extends AppCompatActivity {
         startActivity(i);
     }
 }
+

@@ -39,7 +39,7 @@ public class AdapterVenda extends ArrayAdapter<Venda> {
         tvQuantidade.setText("Qtd: " + listaVendas.get(position).getQuantidade().toString());
         tvData.setText(listaVendas.get(position).getData());
         DecimalFormat formatter = new DecimalFormat("#.00");
-        tvPreco.setText(formatter.format(listaVendas.get(position).getPreco()) + " R$");
+        tvPreco.setText("R$ "+ formatter.format(listaVendas.get(position).getPreco()));
 
         return linha;
     }

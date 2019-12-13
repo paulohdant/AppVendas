@@ -28,6 +28,28 @@ public class VendaDAO {
 		closeDB();
 	}
 
+	public void deletar(Integer IdCliente) throws SQLException {
+		openDB();
+		banco.delete("venda", "_id = " +IdCliente, null);
+		Toast.makeText(context, "Venda excluída com sucesso!", Toast.LENGTH_SHORT).show();
+		closeDB();
+	}
+
+	public void atualizar(Venda venda) throws SQLException {
+		ContentValues valores;
+		openDB();
+		valores = new ContentValues();
+		//valores.put("_id", venda.getId());
+		valores.put("quantidade", venda.getQuantidade());
+		valores.put("descricao", venda.getDescricao());
+		valores.put("data", venda.getData());
+		valores.put("preco", venda.getPreco());
+		valores.put("idCliente", venda.getIdCliente());
+		banco.update("venda", valores, "_id = ?", new String[]{venda.getId().toString()});
+		Toast.makeText(context, "Venda modificada com sucesso!", Toast.LENGTH_SHORT).show();
+		closeDB();
+	}
+
 	public ArrayList<Venda> obterVendas(Integer idCliente) {
 		ArrayList<Venda> vendas = new ArrayList<>();
 		banco = conexao.getWritableDatabase();

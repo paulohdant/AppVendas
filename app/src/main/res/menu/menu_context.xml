@@ -10,4 +10,5 @@
 
     <item android:title="@string/excluirCliente"
         android:onClick="excluirClienteDAO" />
+
 </menu>

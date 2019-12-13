@@ -2,7 +2,9 @@ package com.example.appvendas.models;
 
 import android.content.ContentValues;
 
-public class Venda {
+import java.io.Serializable;
+
+public class Venda implements Serializable {
     private Integer id;
     private Integer quantidade;
     private String descricao;

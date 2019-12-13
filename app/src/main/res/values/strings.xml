@@ -3,7 +3,7 @@
     <string name="nome">Nome</string>
     <string name="numero">Número</string>
     <string name="salvar">Salvar</string>
-    <string name="valorTotal">Valor total: 00,00 R$</string>
+    <string name="valorTotal">Valor total: </string>
     <string name="bt_cadCliente">Cadastrar cliente</string>
     <string name="buscaClientes">Buscar</string>
     <string name="bt_listaCliente">Lista de Clientes</string>
@@ -14,5 +14,7 @@
     <string name="QuantidadeProduto">Quantidade de produto</string>
     <string name="descricaoProduto">Descrição do produto</string>
     <string name="DataProduto">Data</string>
+    <string name="nameExcluir">Excluir venda</string>
+    <string name="nameAtualizar">Atualizar venda</string>
     <string name="precoProduto">Preço</string>
 </resources>
