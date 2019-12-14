@@ -136,7 +136,6 @@ public class FormsVenda extends AppCompatActivity {
             Toast.makeText(this, "Venda modificada! ", Toast.LENGTH_LONG).show();
             finish();
         }
-        finish();
     }
 }
 

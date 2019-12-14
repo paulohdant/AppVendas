@@ -20,7 +20,7 @@
         android:hint="@string/descricaoProduto"
         android:inputType="textPersonName|textCapSentences"
         android:textColor="@color/colorAccent"
-        android:textSize="14sp"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -38,7 +38,7 @@
         android:hint="@string/QuantidadeProduto"
         android:inputType="number"
         android:textColor="@color/colorAccent"
-        android:textSize="14sp"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etPrecoForm" />
@@ -56,7 +56,7 @@
         android:hint="@string/DataProduto"
         android:inputType="date"
         android:textColor="@color/colorAccent"
-        android:textSize="14sp"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etQntForm" />
@@ -74,7 +74,7 @@
         android:hint="@string/precoProduto"
         android:inputType="numberSigned|number|numberDecimal"
         android:textColor="@color/colorAccent"
-        android:textSize="14sp"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etDescForm" />

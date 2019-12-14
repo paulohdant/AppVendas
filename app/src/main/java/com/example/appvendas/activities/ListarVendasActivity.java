@@ -79,8 +79,8 @@ public class ListarVendasActivity extends AppCompatActivity {
 	public double percorrer(){
 		double a = 0.0;
 		for (Venda v: vendas){
-			a = v.getPreco() + a;
-			tvTotalDevedor.setText(Double.toString(a));
+			a = (v.getPreco()  * v.getQuantidade()) + a;
+			tvTotalDevedor.setText("R$ " + Double.toString(a));
 		}
 		return a;
 	}
@@ -114,5 +114,6 @@ public class ListarVendasActivity extends AppCompatActivity {
 		Intent i = new Intent(this, FormsVenda.class);
 		i.putExtra("vendas", vendaAtualizar);
 		startActivity(i);
+		finish();
 	}
 }
